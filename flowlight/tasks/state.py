@@ -15,7 +15,7 @@ class TaskState:
     def state(self, state):
         if state not in (self.PENDING, self.STARTED, self.FINISHED):
             raise Exception('Illegal state')
-        self.state = state
+        self._state = state
 
     @classmethod
     def init(cls):
